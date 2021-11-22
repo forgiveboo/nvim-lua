@@ -103,5 +103,7 @@ return require('packer').startup(function()
   }
 
   use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+  
+  use {"ellisonleao/glow.nvim"}
 
 end)
