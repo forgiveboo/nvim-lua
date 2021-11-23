@@ -110,39 +110,39 @@ require'lspconfig'.jedi_language_server.setup{
 }
 
 
-local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+--local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
 --local config = {
-require'lspconfig'.jdtls.setup{
-  cmd = { 
-    "java", 
-    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
-    "-Dosgi.bundles.defaultStartLevel=4",
-    "-Declipse.product=org.eclipse.jdt.ls.core.product",
-    "-Dlog.protocol=true",
-    "-Dlog.level=ALL",
-    "-Xms1g",
+--require'lspconfig'.jdtls.setup{
+--  cmd = { 
+--    "java", 
+--    "-Declipse.application=org.eclipse.jdt.ls.core.id1",
+--    "-Dosgi.bundles.defaultStartLevel=4",
+--    "-Declipse.product=org.eclipse.jdt.ls.core.product",
+--    "-Dlog.protocol=true",
+--    "-Dlog.level=ALL",
+--    "-Xms1g",
 --    "-Xmx2G",
-    "--add-modules=ALL-SYSTEM",
-    "--add-opens", "java.base/java.util=ALL-UNNAMED",
-    "--add-opens", "java.base/java.lang=ALL-UNNAMED",
-    "-jar", "~/Lib/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
-    "-configuration", "~/Lib/jdtls/config_linux",
-    "-data", "~/.cache/jdtls-workspace" .. project_name,
-  },
-  filetypes = { "java" },
+--    "--add-modules=ALL-SYSTEM",
+--    "--add-opens", "java.base/java.util=ALL-UNNAMED",
+--    "--add-opens", "java.base/java.lang=ALL-UNNAMED",
+--    "-jar", "~/Lib/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
+--    "-configuration", "~/Lib/jdtls/config_linux",
+--    "-data", "~/.cache/jdtls-workspace" .. project_name,
+--  },
+--  filetypes = { "java" },
 --  handlers = {
     --["language/status"] = <function 1 >,
     --["textDocument/codeAction"] = <function 2>,
     --["textDocument/rename"] = <function 3>,
     --["workspace/applyEdit"] = <function 4>
 --  },
-  init_options = {
-    jvm_args = {},
-    workspace = vim.api.nvim_get_runtime_file("", true)
-  },
+--  init_options = {
+--    jvm_args = {},
+--    workspace = vim.api.nvim_get_runtime_file("", true)
+--  },
 --  root_dir = '.git',
 --  root_dir = {'.git', 'mvnw', 'gradlew'},
-  single_file_support = true,
+--  single_file_support = true,
 --    -- Single-module projects
 --    {
 --      'build.xml', -- Ant
@@ -153,5 +153,5 @@ require'lspconfig'.jdtls.setup{
     -- Multi-module projects
 --    { 'build.gradle', 'build.gradle.kts' },
 --    }, --or vim.fn.getcwd(),
-  single_file_mode = true
-}
+--  single_file_mode = true
+--}
