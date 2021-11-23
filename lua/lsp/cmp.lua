@@ -140,8 +140,9 @@ require'lspconfig'.jdtls.setup{
 --    jvm_args = {},
 --    workspace = ""
 --  },
---  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
---  root_dir = {
+--  root_dir = '.git',
+--  root_dir = {'.git', 'mvnw', 'gradlew'},
+  single_file_support = true,
 --    -- Single-module projects
 --    {
 --      'build.xml', -- Ant
@@ -151,7 +152,6 @@ require'lspconfig'.jdtls.setup{
 --    },
     -- Multi-module projects
 --    { 'build.gradle', 'build.gradle.kts' },
---    } or vim.fn.getcwd(),
-  single_file_mode = true
---}
+--    }, --or vim.fn.getcwd(),
+  single_file_mode = true,
 }
