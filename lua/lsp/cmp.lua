@@ -141,7 +141,7 @@ require'lspconfig'.jdtls.setup{
   },
 --  root_dir = '.git',
 --  root_dir = {'.git', 'mvnw', 'gradlew'},
---  single_file_support = true,
+  single_file_support = true,
 --    -- Single-module projects
 --    {
 --      'build.xml', -- Ant
