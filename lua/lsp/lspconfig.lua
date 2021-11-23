@@ -10,3 +10,8 @@ lsp_installer.settings({
     }
 })
 
+lsp_installer.on_server_ready(function (server)
+  local opts = {}
+  server:setup(opts)
+  vim.cmd([[ do User LspAttach Buffers]])
+end)
