@@ -1,5 +1,57 @@
+local status, nvim_lsp = pcall(require, "lspconfig")
+if (not status) then
+  return
+end
+
+vim.o.completeopt = "menuone,noselect"
+
+local luasnip = require "luasnip"
+local lspkind = require("lspkind")
+
 local cmp = require'cmp'
-  
+
+-- 自动提示1 详情信息
+local cmpFormat1 = function(entry, vim_item)
+  -- fancy icons and a name of kind
+  vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
+  -- set a name for each source
+  vim_item.menu =
+    ({
+    buffer = "[Buffer]",
+    nvim_lsp = "[LSP]",
+    ultisnips = "[UltiSnips]",
+    nvim_lua = "[Lua]",
+    cmp_tabnine = "[TabNine]",
+    path = "[Path]",
+    emoji = "[Emoji]"
+  })[entry.source.name]
+  return vim_item
+end
+
+-- 自动提示2 简洁信息
+local cmpFormat2 = function(entry, vim_item)
+  vim_item.kind = lspkind.presets.default[vim_item.kind]
+  return vim_item
+end
+
+-- 自动提示3 详情信息
+local cmpFormat3 = function(entry, vim_item)
+  -- fancy icons and a name of kind
+  vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. ""
+  -- set a name for each source
+  vim_item.menu =
+    ({
+    buffer = "[Buffer]",
+    nvim_lsp = "",
+    ultisnips = "[UltiSnips]",
+    nvim_lua = "[Lua]",
+    cmp_tabnine = "[TabNine]",
+    path = "[Path]",
+    emoji = "[Emoji]"
+  })[entry.source.name]
+  return vim_item
+end
+
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
