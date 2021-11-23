@@ -60,7 +60,7 @@ local servers = {
   "html",
   "cssls",
   "phpactor",
---  "jdtls",
+  "jdtls",
   "sumneko_lua"
 }
 
@@ -121,21 +121,21 @@ require'lspconfig'.jdtls.setup{
     "-Dlog.protocol=true",
     "-Dlog.level=ALL",
     "-Xms1g",
-    "-Xmx2G",
+--    "-Xmx2G",
     "--add-modules=ALL-SYSTEM",
     "--add-opens", "java.base/java.util=ALL-UNNAMED",
     "--add-opens", "java.base/java.lang=ALL-UNNAMED",
-    "-jar", "/home/forgiveboo/.local/share/nvim/lsp_servers/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
-    "-configuration", "/home/forgiveboo/.local/nvim/lsp_servers/jdtls/config_linux",
-    "-data", "~/.cache/jdtls-workspace" .. project_name
+    "-jar", "~/Lib/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar",
+    "-configuration", "~/Lib/jdtls/config_linux",
+    "-data", "~/.cache/jdtls-workspace" .. project_name,
   },
   filetypes = { "java" },
-  handlers = {
+--  handlers = {
     --["language/status"] = <function 1 >,
     --["textDocument/codeAction"] = <function 2>,
     --["textDocument/rename"] = <function 3>,
     --["workspace/applyEdit"] = <function 4>
-  },
+--  },
   init_options = {
     jvm_args = {},
     workspace = vim.api.nvim_get_runtime_file("", true)
@@ -153,5 +153,16 @@ require'lspconfig'.jdtls.setup{
     -- Multi-module projects
 --    { 'build.gradle', 'build.gradle.kts' },
 --    }, --or vim.fn.getcwd(),
-  single_file_mode = true,
+  single_file_mode = true
 }
+
+vim.notify = function(msg, log_level, _opts)
+  if msg:match("exit code") then
+      return
+  end
+  if log_level == vim.log.levels.ERROR then
+    vim.api.nvim_err_writeln(msg)
+  else
+    vim.api.nvim_echo({{msg}}, true, {})
+  end
+end
