@@ -81,9 +81,9 @@ require('lspconfig').sumneko_lua.setup {
     Lua = {
       runtime = {
       -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-      version = 'LuaJIT',
+        version = 'LuaJIT',
       -- Setup your lua path
-      path = runtime_path,
+        path = runtime_path,
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
@@ -136,10 +136,10 @@ require'lspconfig'.jdtls.setup{
     --["textDocument/rename"] = <function 3>,
     --["workspace/applyEdit"] = <function 4>
   },
---  init_options = {
---    jvm_args = {},
---    workspace = ""
---  },
+  init_options = {
+    jvm_args = {},
+    workspace = vim.api.nvim_get_runtime_file("", true)
+  },
 --  root_dir = '.git',
 --  root_dir = {'.git', 'mvnw', 'gradlew'},
   single_file_support = true,
