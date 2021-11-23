@@ -14,6 +14,16 @@ formatter.setup(
             stdin = true
           }
         end
+      },
+
+      java = {
+        function ()
+          return {
+            exe = 'astyle',
+            args = {'-style=kr'},
+            stdin = true
+          }
+        end
       }
     }
   }
