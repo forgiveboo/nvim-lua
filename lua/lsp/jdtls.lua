@@ -33,7 +33,7 @@ nvim_lsp.jdtls.setup {
     "java.base/java.util=ALL-UNNAMED", 
     "--add-opens", 
     "java.base/java.lang=ALL-UNNAMED", 
-    "-jar", "~/Lib/jdtls/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar", 
+    "-jar", "~/Lib/jdtls/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar", 
     "-configuration", "~/Lib/jdtls/config_linux", 
     "-data", "~/.cache/jdtls-workspace" .. project_name, 
   },
