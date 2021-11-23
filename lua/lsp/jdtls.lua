@@ -43,5 +43,6 @@ nvim_lsp.jdtls.setup {
     workspace = vim.api.nvim_get_runtime_file("", true)
   },
   single_file_support = true,
-  single_file_mode = true
+  single_file_mode = true,
+  capabilities = capabilities
 }
