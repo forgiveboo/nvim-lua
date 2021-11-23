@@ -99,4 +99,6 @@ return require('packer').startup(function()
   
   use {"ellisonleao/glow.nvim"}
 
+  use 'mhartington/formatter.nvim'
+
 end)
