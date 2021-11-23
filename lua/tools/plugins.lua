@@ -5,7 +5,8 @@ return require('packer').startup(function()
 
   use 'rakr/vim-one'
   use 'rafamadriz/neon' 
-  use 'marko-cerovac/material.nvim' 
+  use 'marko-cerovac/material.nvim'
+
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
@@ -65,18 +66,25 @@ return require('packer').startup(function()
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-nvim-lua',
+      'hrsh7th/cmp-nvim-lsp', -- nvim内置lsp客户端的nvim-cmp源码
+      'onsails/lspkind-nvim', -- 自动完成美化
+      'hrsh7th/cmp-nvim-lua', 
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
-      'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip',
-      "rafamadriz/friendly-snippets",
-      "ray-x/lsp_signature.nvim"
     }
   }
   
+  use {
+    'L3MON4D3/LuaSnip',
+    requires = {
+      'saadparwaiz1/cmp_luasnip',
+      "rafamadriz/friendly-snippets",
+    }
+  }
+
+  use "ray-x/lsp_signature.nvim"
+
   use 'glepnir/galaxyline.nvim'
 
   use 'windwp/nvim-autopairs'
