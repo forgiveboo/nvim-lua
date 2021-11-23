@@ -103,6 +103,6 @@ cmp.setup.cmdline(':', {
   })
 })
 
-require("lua")
-require('python')
-require('jdtls')
+require("lsp.lua")
+require('lsp.python')
+require('lsp.jdtls')
