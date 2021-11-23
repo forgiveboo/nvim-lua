@@ -15,8 +15,3 @@ lsp_installer.on_server_ready(function (server)
   server:setup(opts)
   vim.cmd([[ do User LspAttach Buffers]])
 end)
-
-local servers = require'lspinstall'.installed_servers()
-for _, server in pairs(servers) do
-  require'lspconfig'[server].setup{}
-end
