@@ -101,4 +101,6 @@ return require('packer').startup(function()
 
   use 'mhartington/formatter.nvim'
 
+  use 'folke/lsp-colors.nvim'
+
 end)
