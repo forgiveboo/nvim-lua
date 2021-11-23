@@ -17,6 +17,5 @@ require('plugin-config.lsp-signature')
 require('plugin-config.nvim-autopair')
 require('lsp.cmp')
 require('lsp.lspconfig')
-require('lsp.jdtls')
 require('plugin-config.luasnip')
 
