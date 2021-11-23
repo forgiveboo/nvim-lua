@@ -2,8 +2,6 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-  
-  use 'mfussenegger/nvim-jdtls'
 
   use 'rakr/vim-one'
   use 'rafamadriz/neon' 
@@ -12,13 +10,6 @@ return require('packer').startup(function()
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
-
-  use {
-    'glepnir/zephyr-nvim',
-    requires = 'm-treesitter/nvim-treesitter'
-  }
-
---  use 'dense-analysis/ale'
 
   use { 
     'ibhagwan/fzf-lua',
@@ -62,8 +53,6 @@ return require('packer').startup(function()
     requires = "nvim-treesitter/nvim-treesitter"
   }
 
-  use 'lukas-reineke/format.nvim'
-
   use 'norcalli/nvim-colorizer.lua'
   
   use "numToStr/FTerm.nvim"
@@ -87,11 +76,6 @@ return require('packer').startup(function()
       "ray-x/lsp_signature.nvim"
     }
   }
-  
-  --use {
-  --  'famiu/feline.nvim',
-  --  requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  --}
   
   use 'glepnir/galaxyline.nvim'
 
