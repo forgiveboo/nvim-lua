@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -89,10 +94,20 @@ _G.packer_plugins = {
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
     url = "https://github.com/hrsh7th/cmp-cmdline"
   },
+  ["cmp-emoji"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/cmp-emoji",
+    url = "https://github.com/hrsh7th/cmp-emoji"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -109,10 +124,15 @@ _G.packer_plugins = {
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["format.nvim"] = {
+  ["fine-cmdline.nvim"] = {
     loaded = true,
-    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/format.nvim",
-    url = "https://github.com/lukas-reineke/format.nvim"
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/fine-cmdline.nvim",
+    url = "https://github.com/VonHeikemen/fine-cmdline.nvim"
+  },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -124,25 +144,55 @@ _G.packer_plugins = {
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
   },
+  ["galaxyline.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/galaxyline.nvim",
+    url = "https://github.com/glepnir/galaxyline.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["glow.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
   },
-  ["lualine.nvim"] = {
+  ["lspkind-nvim"] = {
     loaded = true,
-    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
+  neon = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/neon",
+    url = "https://github.com/rafamadriz/neon"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -209,6 +259,11 @@ _G.packer_plugins = {
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sniprun = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/sniprun",
+    url = "https://github.com/michaelb/sniprun"
+  },
   ["vim-one"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/vim-one",
@@ -218,11 +273,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/wilder.nvim",
     url = "https://github.com/gelguy/wilder.nvim"
-  },
-  ["zephyr-nvim"] = {
-    loaded = true,
-    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/zephyr-nvim",
-    url = "https://github.com/glepnir/zephyr-nvim"
   }
 }
 
