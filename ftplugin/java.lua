@@ -76,4 +76,3 @@ local config = {
 -- or attaches to an existing client & server depending on the `root_dir`.
 require('jdtls').start_or_attach(config)
 local opts = { noremap=true, silent=true }
-vim.api.nvim_set_keymap('n', '<A-CR> <Cmd>lua require(\'jdtls\').code_action()<CR>', opts)
