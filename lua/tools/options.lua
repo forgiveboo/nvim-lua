@@ -81,8 +81,8 @@ vim.o.pumheight = 10
 -- vim.o.showtabline = 2
 -- 设置主题
 --require('zephyr')
-vim.g.material_style = "deep ocean"
-vim.cmd[[colorscheme material]]
+--vim.g.material_style = "deep ocean"
+vim.cmd[[colorscheme moonfly]]
 --require('one')
 -- dashboard
 vim.g.dashboard_default_executive ='fzf'
