@@ -4,7 +4,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use 'rakr/vim-one'
-  use 'rafamadriz/neon' 
+  use 'rafamadriz/neon'
   use 'marko-cerovac/material.nvim'
   use 'bluz71/vim-moonfly-colors'
 
@@ -13,7 +13,7 @@ return require('packer').startup(function()
       run = ':TSUpdate'
     }
 
-  use { 
+  use {
     'ibhagwan/fzf-lua',
     requires = {
       'vijaymarupudi/nvim-fzf',
@@ -29,7 +29,7 @@ return require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
   }
-  
+
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
@@ -41,7 +41,7 @@ return require('packer').startup(function()
   use "lukas-reineke/indent-blankline.nvim"
 
   use {
-    'gelguy/wilder.nvim', 
+    'gelguy/wilder.nvim',
     run = ':UpdateRemotePlugins'
   }
 
@@ -56,9 +56,9 @@ return require('packer').startup(function()
   }
 
   use 'norcalli/nvim-colorizer.lua'
-  
+
   use "numToStr/FTerm.nvim"
- 
+
   use {
     'williamboman/nvim-lsp-installer',
     requires = 'neovim/nvim-lspconfig'
@@ -69,14 +69,14 @@ return require('packer').startup(function()
     requires = {
       'hrsh7th/cmp-nvim-lsp', -- nvim内置lsp客户端的nvim-cmp源码
       'onsails/lspkind-nvim', -- 自动完成美化
-      'hrsh7th/cmp-nvim-lua', 
+      'hrsh7th/cmp-nvim-lua',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
       "hrsh7th/cmp-emoji"
     }
   }
-  
+
   use {
     'L3MON4D3/LuaSnip',
     requires = {
@@ -100,7 +100,7 @@ return require('packer').startup(function()
   }
 
   use { 'michaelb/sniprun', run = 'bash ./install.sh'}
-  
+
   use {"ellisonleao/glow.nvim"}
 
   use 'mhartington/formatter.nvim'
@@ -108,7 +108,7 @@ return require('packer').startup(function()
   use 'folke/lsp-colors.nvim'
 
   use {
-    'akinsho/bufferline.nvim', 
+    'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
