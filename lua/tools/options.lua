@@ -56,7 +56,7 @@ vim.o.mouse = "a"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
--- smaller updatetime 
+-- smaller updatetime
 vim.o.updatetime = 300
 -- 等待mappings
 vim.o.timeoutlen = 100
@@ -89,4 +89,4 @@ vim.g.dashboard_default_executive ='fzf'
 vim.g.indentLine_fileTypeExclude = {'dashboard', 'nvim-lsp-installer'}
 -- wildmenu
 -- deoplete
-vim.fn['deoplete#enable_at_startup'] = 1
+--vim.fn['deoplete#enable_at_startup'] = 1
