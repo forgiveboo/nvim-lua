@@ -87,7 +87,10 @@ return require('packer').startup(function()
 
   use "ray-x/lsp_signature.nvim"
 
-  use 'glepnir/galaxyline.nvim'
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 
   use 'windwp/nvim-autopairs'
 

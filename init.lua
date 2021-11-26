@@ -7,7 +7,7 @@ require('tools.keymaps')
 -- 插件配置
 require('plugins.nvim-treesitter')
 require('plugins.nvim-tree')
-require('plugins.galaxyline')
+require('plugins.lualine')
 require('plugins.gitsigns')
 require('plugins.indent-blank-line')
 require('plugins.nvim-treesitter-context')
