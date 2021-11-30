@@ -90,3 +90,5 @@ vim.g.indentLine_fileTypeExclude = {'dashboard', 'nvim-lsp-installer'}
 -- wildmenu
 -- deoplete
 --vim.fn['deoplete#enable_at_startup'] = 1
+-- glow
+vim.g.glow_binary_path = "/usr/bin/glow"
