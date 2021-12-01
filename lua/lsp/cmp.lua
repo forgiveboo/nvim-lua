@@ -5,12 +5,24 @@ end
 
 vim.o.completeopt = "menuone,noselect"
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 local luasnip = require "luasnip"
 local lspkind = require("lspkind")
 
 local compare = require('cmp.config.compare')
 
 local cmp = require'cmp'
+
+-- 自定义提示图标
+local signs = { Error = "", Warn = "", Hint = "", Info = "" }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
+
 
 -- 自动提示1 详情信息
 local cmpFormat1 = function(entry, vim_item)
