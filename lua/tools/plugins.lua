@@ -114,7 +114,6 @@ return require('packer').startup(function()
 
   use 'mfussenegger/nvim-jdtls'
 
---  use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
   use {"ellisonleao/glow.nvim"}
 
 end)
