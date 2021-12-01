@@ -82,7 +82,9 @@ vim.o.pumheight = 10
 -- 设置主题
 --require('zephyr')
 --vim.g.material_style = "deep ocean"
-vim.cmd[[colorscheme aurora]]
+vim.g.tokyonight_style = "night"
+vim.g.tokyonight_italic_functions = true
+vim.cmd[[colorscheme tokyonight]]
 --require('one')
 -- dashboard
 vim.g.dashboard_default_executive ='fzf'

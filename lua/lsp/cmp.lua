@@ -23,7 +23,6 @@ for type, icon in pairs(signs) do
 end
 vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 
-
 -- 自动提示1 详情信息
 local cmpFormat1 = function(entry, vim_item)
   -- fancy icons and a name of kind
@@ -42,39 +41,16 @@ local cmpFormat1 = function(entry, vim_item)
   return vim_item
 end
 
--- 自动提示2 简洁信息
-local cmpFormat2 = function(entry, vim_item)
-  vim_item.kind = lspkind.presets.default[vim_item.kind]
-  return vim_item
-end
-
--- 自动提示3 详情信息
-local cmpFormat3 = function(entry, vim_item)
-  -- fancy icons and a name of kind
-  vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. ""
-  -- set a name for each source
-  vim_item.menu =
-    ({
-    buffer = "[Buffer]",
-    nvim_lsp = "",
-    ultisnips = "[UltiSnips]",
-    nvim_lua = "[Lua]",
-    cmp_tabnine = "[TabNine]",
-    path = "[Path]",
-    emoji = "[Emoji]"
-  })[entry.source.name]
-  return vim_item
-end
-
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      --require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      luasnip.lsp_expand(args.body)
     end,
   },
   sorting = {
-    priority_weight = 2,
+    priority_weight = 8,
     comparators = {
       compare.offset,
       compare.exact,
@@ -105,7 +81,10 @@ cmp.setup({
     { name = 'buffer' },
     { name = 'cmdline'},
     { name = 'path' }
-  }), 
+  }),
+  formatting = {
+    format = lspkind.cmp_format({with_text = false, maxwidth = 60})
+  }
 })
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline('/', {

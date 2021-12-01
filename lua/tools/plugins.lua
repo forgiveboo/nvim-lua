@@ -8,6 +8,8 @@ return require('packer').startup(function()
   use 'marko-cerovac/material.nvim'
   use 'bluz71/vim-moonfly-colors'
   use 'ray-x/aurora'
+  use 'xiyaowong/nvim-transparent'
+  use 'folke/tokyonight.nvim'
 
   use {
       'nvim-treesitter/nvim-treesitter',
