@@ -7,6 +7,7 @@ return require('packer').startup(function()
   use 'rafamadriz/neon'
   use 'marko-cerovac/material.nvim'
   use 'bluz71/vim-moonfly-colors'
+  use 'ray-x/aurora'
 
   use {
       'nvim-treesitter/nvim-treesitter',
