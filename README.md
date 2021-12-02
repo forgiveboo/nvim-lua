@@ -18,7 +18,7 @@
 - [X] [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
 - [X] [lspkind](https://github.com/onsails/lspkind-nvim)
 - [ ] [lualine](https://github.com/nvim-lualine/lualine.nvim)
-- [X] [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+- [ ] [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 - [X] [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 - [ ] [nvim-gps](https://github.com/SmiteshP/nvim-gps)
 - [ ] [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
