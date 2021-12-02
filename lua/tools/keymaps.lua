@@ -1,12 +1,11 @@
 -- leader key 为空格
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- 本地变量
 local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true }
 
-map('n', '<A-f>', "<cmd>lua require('fzf-lua').files()<CR>", opt)
 map('n', '<A-n>', ":NvimTreeToggle<CR>", opt)
 map('n', '<A-i>', '<cmd>lua require("FTerm").toggle()<CR>', opt)
 map('t', '<A-i>', '<cmd>lua require("FTerm").toggle()<CR>', opt)
@@ -19,3 +18,7 @@ map('n', '<C-l>', ':BufferLineCycleNext<CR>',opt)
 map('n', '<C-h>', ':BufferLineCyclePrev<CR>', opt)
 map('n', '<C-p>', ':BufferLinePick<CR>', opt)
 map('n', '<C-d>', ':BufferLinePickClose<CR>', opt)
+map('n', '<S-f>', '<cmd>lua require("telescope.builtin").find_files()<cr>', opt)
+map('n', '<S-l>', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opt)
+map('n', '<S-b>', '<cmd>lua require("telescope.builtin").buffers()<cr>', opt)
+map('n', '<S-h>', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opt)

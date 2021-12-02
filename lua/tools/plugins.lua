@@ -17,12 +17,10 @@ return require('packer').startup(function()
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
-
+ 
   use {
-    'ibhagwan/fzf-lua',
-    requires = {
-      'vijaymarupudi/nvim-fzf',
-      'kyazdani42/nvim-web-devicons' } -- optional for icons
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use {
@@ -82,10 +80,19 @@ return require('packer').startup(function()
     }
   }
   
---  use {
---    'glepnir/lspsaga.nvim',
---    requires = 'neovim/nvim-lspconfig'
---  }
+  use 'folke/lsp-colors.nvim'
+
+  use 'mfussenegger/nvim-jdtls'
+
+  use {
+    'glepnir/lspsaga.nvim',
+    requires = 'neovim/nvim-lspconfig'
+  }
+
+  use {
+    'VonHeikemen/fine-cmdline.nvim',
+    requires = 'MunifTanjim/nui.nvim'
+  }
 
   use {
     'L3MON4D3/LuaSnip',
@@ -104,24 +111,14 @@ return require('packer').startup(function()
 
   use 'windwp/nvim-autopairs'
 
-  use {
-    'VonHeikemen/fine-cmdline.nvim',
-    requires = 'MunifTanjim/nui.nvim'
-  }
-
   use { 'michaelb/sniprun', run = 'bash ./install.sh'}
 
-
   use 'mhartington/formatter.nvim'
-
-  use 'folke/lsp-colors.nvim'
 
   use {
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
-
-  use 'mfussenegger/nvim-jdtls'
 
   use {"ellisonleao/glow.nvim"}
 
