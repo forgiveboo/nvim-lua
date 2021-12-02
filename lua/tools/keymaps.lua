@@ -74,3 +74,5 @@ map('n', '<leader>ld', '<cmd>lua require("lspsaga.diagnostic").show_line_diagnos
 map('n', '<leader>cd', '<cmd>lua require("lspsaga.diagnostic").show_cursor_diagnostics()<CR>', opt)
 map('n', '<leader>jp', ' <cmd>lua require("lspsaga.diagnostic").lsp_jump_diagnostic_prev()<CR>', opt)
 map('n', '<leader>jn', '<cmd>lua require("lspsaga.diagnostic").lsp_jump_diagnostic_next()<CR>', opt)
+-- lazygit
+map('n', '<leader>gg', ':LazyGit<CR>', opt)

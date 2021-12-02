@@ -47,6 +47,9 @@ return require('packer').startup(function()
     -- tag = 'release' -- To use the latest release
   }
 
+  -- lazygit
+  use 'kdheepak/lazygit.nvim'
+
   -- 缩进
   use "lukas-reineke/indent-blankline.nvim"
 
