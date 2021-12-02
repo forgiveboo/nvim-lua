@@ -24,7 +24,7 @@ ln -s ~/.nvim-lua nvim
 ```
 ##### 安装后需要做的事
 - 安装插件`:PackerInstall`
-   > 中国用户可能需要**"特殊处理"**
+> 中国用户可能需要"特殊处理"
 #### 用到的插件
 - [ ] [bufferline](https://github.com/akinsho/bufferline.nvim)
 - [ ] [dashboard](https://github.com/glepnir/dashboard-nvim)
