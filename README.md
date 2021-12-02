@@ -1,5 +1,6 @@
 #### 使用Lua配置Nvim
 > 对Lua语言不太懂，大多数配置都是照抄大神的，在此感谢大神们的贡献
+配置还不够完善，我在尽力完善
 #### 截图
 ![启动页](https://github.com/forgiveboo/nvim-lua/blob/main/screenshots/dashboard.png)
 ![Nvim使用界面](https://github.com/forgiveboo/nvim-lua/blob/main/screenshots/nvim.png)
