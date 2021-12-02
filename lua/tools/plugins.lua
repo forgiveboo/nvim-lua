@@ -12,6 +12,8 @@ return require('packer').startup(function()
   use 'xiyaowong/nvim-transparent'
   use 'folke/tokyonight.nvim'
 
+  use 'folke/which-key.nvim'
+
   -- 语法
   use {
       'nvim-treesitter/nvim-treesitter',

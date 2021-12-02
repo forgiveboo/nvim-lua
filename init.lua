@@ -1,9 +1,9 @@
+-- 快捷键设置
+require('tools.keymaps')
 -- 插件管理
 require('tools.plugins')
 -- 基础设置
 require('tools.options')
--- 快捷键设置
-require('tools.keymaps')
 -- 插件配置
 require('plugins.nvim-treesitter')
 require('plugins.nvim-tree')
