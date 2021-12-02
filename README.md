@@ -5,19 +5,19 @@
 ![Nvim使用界面](https://github.com/forgiveboo/nvim-lua/blob/main/screenshots/nvim.png)
 > 主题是[tokyonight](https://github.com/folke/tokyonight.nvim)
 #### 安装
-- 1. 安装前需要做的事
+1. 安装前需要做的事
    - 安装[fd](https://github.com/sharkdp/fd)(文件搜索需要)
    - 安装pynvim(为nvim添加python支持)
-- 2. 安装packer
+2. 安装packer
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
-- 3. 克隆本仓库
+3. 克隆本仓库
 ```
 git clone https://github.com/forgiveboo/nvim-lua.git ~/.nvim-lua
 ```
-- 4. 创建软链接
+4. 创建软链接
 ```
 cd ~/.config
 ln -s ~/.nvim-lua nvim
