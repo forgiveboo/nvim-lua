@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
+  -- 主题
   use 'rakr/vim-one'
   use 'rafamadriz/neon'
   use 'marko-cerovac/material.nvim'
@@ -11,6 +12,7 @@ return require('packer').startup(function()
   use 'xiyaowong/nvim-transparent'
   use 'folke/tokyonight.nvim'
 
+  -- 语法
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
@@ -122,5 +124,13 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-jdtls'
 
   use {"ellisonleao/glow.nvim"}
+
+  use {
+    'lewis6991/spellsitter.nvim',
+  }
+
+  use {
+    'RRethy/vim-illuminate'
+  }
 
 end)

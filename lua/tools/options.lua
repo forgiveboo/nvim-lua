@@ -38,8 +38,6 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 -- 使用增强状态栏后不再需要 vim 的模式提示
 vim.o.showmode = false
--- 命令行高为2，提供足够的显示空间
--- vim.o.cmdheight = 2
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
 vim.bo.autoread = true
@@ -71,7 +69,7 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 不可见字符的显示，这里只把空格显示为一个点
 vim.o.list = true
-vim.o.listchars = "space:·"
+--vim.o.listchars = "space:·"
 -- 补全增强
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
@@ -85,12 +83,8 @@ vim.o.pumheight = 10
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.cmd[[colorscheme tokyonight]]
---require('one')
--- dashboard
-vim.g.dashboard_default_executive ='fzf'
-vim.g.indentLine_fileTypeExclude = {'dashboard', 'nvim-lsp-installer'}
--- wildmenu
--- deoplete
---vim.fn['deoplete#enable_at_startup'] = 1
--- glow
---vim.g.glow_binary_path = "/usr/bin/glow"
+
+vim.g.indentLine_fileTypeExclude = {
+  'dashboard',
+  'nvim-lsp-installer'
+}
