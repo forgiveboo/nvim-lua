@@ -26,6 +26,7 @@
 - [ ] [nvim-treesitter-context](https://github.com/romgrk/nvim-treesitter-context)
 - [ ] [sniprun](https://github.com/michaelb/sniprun)
 - [ ] [spellsitter](https://github.com/lewis6991/spellsitter.nvim)
+- [ ] [which-key](https://github.com/folke/which-key.nvim)
 > 只贴出了需要配置的插件，其他可以直接使用的没有贴出来
 #### TODO
 - [ ] 配置dashboader可以使用启动页上的功能
