@@ -36,21 +36,31 @@ map("n", "<A-l>", "<C-w>l", opt)
 map('n', '<C-x>', ':q<CR>', opt)
 map('n', '<C-s>', ':w<CR>', opt)
 
--- 插件快捷键
+-- 开关文件树
 map('n', '<leader>nt', ":NvimTreeToggle<CR>", opt)
+-- 开关浮动终端
 map('n', '<leader>tm', '<cmd>lua require("FTerm").toggle()<CR>', opt)
 map('t', '<leader>tm', '<cmd>lua require("FTerm").toggle()<CR>', opt)
+-- 打开浮动命令栏
 map('n', '<leader>cl', '<cmd>lua require("fine-cmdline").open()<CR>', opt)
+-- markdown预览
 map('n', '<leader>mp', ':Glow<CR>', opt)
+-- 快速运行代码
 map('n', '<F5>',  ':SnipRun<CR>', opt)
+-- 后一个buffer
 map('n', '<leader>bh', ':BufferLineCycleNext<CR>',opt)
+-- 前一个buffer
 map('n', '<leader>bl', ':BufferLineCyclePrev<CR>', opt)
+-- 选择一个buffer
 map('n', '<leader>bp', ':BufferLinePick<CR>', opt)
+-- 选择一个buffer并关闭
 map('n', '<leader>bc', ':BufferLinePickClose<CR>', opt)
+-- 文件搜索
 map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>', opt)
 map('n', '<leader>fl', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opt)
 map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', opt)
 map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opt)
+-- 一系列lspsaga快捷键
 map('n', '<leader>lf', '<cmd>lua require("lspsaga.provider").lsp_finder()<CR>', opt)
 map('n', '<leader>ca', '<cmd>lua require("lspsaga.codeaction").code_action()<CR>', opt)
 map('v', '<leader>ca', ':<C-U>lua require("lspsaga.codeaction").range_code_action()<CR>', opt)
