@@ -8,7 +8,7 @@
 ##### 安装前需要做的事
 - 安装[fd](https://github.com/sharkdp/fd)(文件搜索需要)
 - 安装pynvim(为nvim添加python支持)
-##### 安装packer
+##### 安装Packer(插件管理工具)
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
