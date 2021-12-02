@@ -3,6 +3,7 @@
 #### 截图
 ![启动页](https://github.com/forgiveboo/nvim-lua/blob/main/screenshots/dashboard.png)
 ![Nvim使用界面](https://github.com/forgiveboo/nvim-lua/blob/main/screenshots/nvim.png)
+> 主题是[tokyonight](https://github.com/folke/tokyonight.nvim)
 #### 用到的插件
 - [ ] [bufferline](https://github.com/akinsho/bufferline.nvim)
 - [ ] [dashboard](https://github.com/glepnir/dashboard-nvim)
