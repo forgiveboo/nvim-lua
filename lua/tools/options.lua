@@ -75,19 +75,7 @@ vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.pumheight = 10
--- always show tabline
--- vim.o.showtabline = 2
 -- 设置主题
---require('zephyr')
---vim.g.material_style = "deep ocean"
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.cmd[[colorscheme tokyonight]]
-
-vim.g.indentLine_fileTypeExclude = {
-  'dashboard',
-  'nvim_lsp_installer',
-  'NvimTree',
-  'packer'
-}
-vim.g.indent_blankline_buftype_exclude = {'terminal'}
