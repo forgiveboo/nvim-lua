@@ -86,5 +86,8 @@ vim.cmd[[colorscheme tokyonight]]
 
 vim.g.indentLine_fileTypeExclude = {
   'dashboard',
-  'nvim-lsp-installer'
+  'nvim_lsp_installer',
+  'NvimTree',
+  'packer'
 }
+vim.g.indent_blankline_buftype_exclude = {'terminal'}
