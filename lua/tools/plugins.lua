@@ -14,27 +14,31 @@ return require('packer').startup(function()
 
   use 'folke/which-key.nvim'
 
-  -- 语法
+  -- 语法高亮
   use {
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
- 
+
+  -- 搜索神器
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  --启动页
   use {
     'glepnir/dashboard-nvim',
     requires = 'ibhagwan/fzf-lua'
   }
 
+  -- 文件树
   use {
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
   }
 
+  -- git修改状态
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
@@ -43,32 +47,40 @@ return require('packer').startup(function()
     -- tag = 'release' -- To use the latest release
   }
 
+  -- 缩进
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- 漂亮的命令提示
   use {
     'gelguy/wilder.nvim',
     run = ':UpdateRemotePlugins'
   }
 
+  -- 文本注释
   use {
     'romgrk/nvim-treesitter-context',
     requires = 'nvim-treesitter/nvim-treesitter'
   }
 
+  -- 语法导航
   use {
     "SmiteshP/nvim-gps",
     requires = "nvim-treesitter/nvim-treesitter"
   }
 
+  -- 高亮颜色代码
   use 'norcalli/nvim-colorizer.lua'
 
+  -- 浮动终端
   use "numToStr/FTerm.nvim"
 
+  -- lsp安装器
   use {
     'williamboman/nvim-lsp-installer',
     requires = 'neovim/nvim-lspconfig'
   }
 
+  -- 自动补全
   use {
     'hrsh7th/nvim-cmp',
     requires = {
@@ -82,8 +94,10 @@ return require('packer').startup(function()
     }
   }
   
+  -- 自动补全美化
   use 'folke/lsp-colors.nvim'
 
+  -- java自动补全
   use 'mfussenegger/nvim-jdtls'
 
   use {
@@ -91,11 +105,13 @@ return require('packer').startup(function()
     requires = 'neovim/nvim-lspconfig'
   }
 
+  -- 浮动窗口下的命令栏
   use {
     'VonHeikemen/fine-cmdline.nvim',
     requires = 'MunifTanjim/nui.nvim'
   }
 
+  -- 代码片段
   use {
     'L3MON4D3/LuaSnip',
     requires = {
@@ -104,30 +120,39 @@ return require('packer').startup(function()
     }
   }
 
+  -- 显示函数签名
   use "ray-x/lsp_signature.nvim"
 
+  -- 状态栏
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
+  -- 括号自动补全
   use 'windwp/nvim-autopairs'
 
+  -- 代码运行
   use { 'michaelb/sniprun', run = 'bash ./install.sh'}
 
+  -- 代码格式化
   use 'mhartington/formatter.nvim'
 
+  -- 标签栏
   use {
     'akinsho/bufferline.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
+  -- markdown预览
   use {"ellisonleao/glow.nvim"}
 
+  -- 拼写检查
   use {
     'lewis6991/spellsitter.nvim',
   }
 
+  -- 高亮光标所在的所有相同单词
   use {
     'RRethy/vim-illuminate'
   }
