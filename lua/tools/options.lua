@@ -78,4 +78,5 @@ vim.o.pumheight = 10
 -- 设置主题
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
+vim.g.tokyonight_italic_comments = false
 vim.cmd[[colorscheme tokyonight]]

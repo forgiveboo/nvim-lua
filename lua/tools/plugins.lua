@@ -12,6 +12,7 @@ return require('packer').startup(function()
   use 'xiyaowong/nvim-transparent'
   use 'folke/tokyonight.nvim'
 
+  -- 快捷键映射
   use 'folke/which-key.nvim'
 
   -- 语法高亮
