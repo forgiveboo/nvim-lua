@@ -9,7 +9,6 @@ return require('packer').startup(function()
   use 'marko-cerovac/material.nvim'
   use 'bluz71/vim-moonfly-colors'
   use 'ray-x/aurora'
-  use 'xiyaowong/nvim-transparent'
   use 'folke/tokyonight.nvim'
 
   -- 快捷键映射
@@ -39,8 +38,7 @@ return require('packer').startup(function()
 
   --启动页
   use {
-    'glepnir/dashboard-nvim',
-    requires = 'ibhagwan/fzf-lua'
+    'glepnir/dashboard-nvim'
   }
 
   -- 文件树
@@ -68,7 +66,7 @@ return require('packer').startup(function()
   use {
     'gelguy/wilder.nvim',
     run = ':UpdateRemotePlugins'
-  } 
+  }
 
   -- 语法导航
   use {
