@@ -144,11 +144,6 @@ _G.packer_plugins = {
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["fzf-lua"] = {
-    loaded = true,
-    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/fzf-lua",
-    url = "https://github.com/ibhagwan/fzf-lua"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -243,11 +238,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-transparent"] = {
-    loaded = true,
-    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
