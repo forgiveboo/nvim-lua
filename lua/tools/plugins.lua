@@ -20,6 +20,11 @@ return require('packer').startup(function()
       run = ':TSUpdate'
     }
 
+    -- 多光标操作
+  use {
+    'mg979/vim-visual-multi', 
+    branch = 'master'
+  }
   -- 搜索神器
   use {
     'nvim-telescope/telescope.nvim',
