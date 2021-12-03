@@ -17,10 +17,15 @@ return require('packer').startup(function()
 
   -- 语法高亮
   use {
-      'nvim-treesitter/nvim-treesitter',
-      run = ':TSUpdate'
-    }
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
+  -- 文本注释
+  use {
+    'romgrk/nvim-treesitter-context',
+    requires = 'nvim-treesitter/nvim-treesitter'
+  }
     -- 多光标操作
   use {
     'mg979/vim-visual-multi', 
@@ -44,7 +49,7 @@ return require('packer').startup(function()
     requires = 'kyazdani42/nvim-web-devicons',
   }
 
-  -- git修改状态
+  -- 查看git修改状态
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
@@ -63,13 +68,7 @@ return require('packer').startup(function()
   use {
     'gelguy/wilder.nvim',
     run = ':UpdateRemotePlugins'
-  }
-
-  -- 文本注释
-  use {
-    'romgrk/nvim-treesitter-context',
-    requires = 'nvim-treesitter/nvim-treesitter'
-  }
+  } 
 
   -- 语法导航
   use {
@@ -82,12 +81,6 @@ return require('packer').startup(function()
 
   -- 浮动终端
   use "numToStr/FTerm.nvim"
-
-  -- lsp安装器
-  use {
-    'williamboman/nvim-lsp-installer',
-    requires = 'neovim/nvim-lspconfig'
-  }
 
   -- 自动补全
   use {
@@ -102,19 +95,26 @@ return require('packer').startup(function()
       "hrsh7th/cmp-emoji"
     }
   }
-  
+
+   -- lsp安装器
+  use {
+    'williamboman/nvim-lsp-installer',
+    requires = 'neovim/nvim-lspconfig'
+  }
+ 
   -- 自动补全美化
   use 'folke/lsp-colors.nvim'
 
   -- java自动补全
   use 'mfussenegger/nvim-jdtls'
 
+  -- 内置LSP UI优化
   use {
     'glepnir/lspsaga.nvim',
     requires = 'neovim/nvim-lspconfig'
   }
 
-  -- 浮动窗口下的命令栏
+  -- 浮动cmdline
   use {
     'VonHeikemen/fine-cmdline.nvim',
     requires = 'MunifTanjim/nui.nvim'
