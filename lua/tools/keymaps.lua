@@ -76,3 +76,6 @@ map('n', '<leader>jp', ' <cmd>lua require("lspsaga.diagnostic").lsp_jump_diagnos
 map('n', '<leader>jn', '<cmd>lua require("lspsaga.diagnostic").lsp_jump_diagnostic_next()<CR>', opt)
 -- lazygit
 map('n', '<leader>lg', ':LazyGit<CR>', opt)
+-- searchbox
+map('n', '<leader>s',  '<cmd>lua require("searchbox").incsearch()<CR>', opt)
+map('v', '<leader>s',  '<Esc><cmd>lua require("searchbox").incsearch({visual_mode = true})<CR>', opt)

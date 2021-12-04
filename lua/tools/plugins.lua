@@ -47,6 +47,12 @@ return require('packer').startup(function()
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
+  -- 更好看的搜索
+  use {
+    'VonHeikemen/searchbox.nvim',
+    requires = 'MunifTanjim/nui.nvim'
+  }
+
   -- ============== LSP相关 ==================
   -- 自动补全
   use {
