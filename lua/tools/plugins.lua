@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
+  -- ============ 界面美化 ================
   -- 主题
   use 'rakr/vim-one'
   use 'rafamadriz/neon'
@@ -11,9 +12,76 @@ return require('packer').startup(function()
   use 'ray-x/aurora'
   use 'folke/tokyonight.nvim'
 
-  -- 快捷键映射
-  use 'folke/which-key.nvim'
+  -- 内浮窗UI美化
+  use 'stevearc/dressing.nvim'
 
+  --启动页
+  use {
+    'glepnir/dashboard-nvim'
+  }
+
+  -- 漂亮的命令提示
+  use {
+    'gelguy/wilder.nvim',
+    run = ':UpdateRemotePlugins'
+  }
+
+  -- 浮动终端
+  use "numToStr/FTerm.nvim"
+
+  -- 浮动cmdline
+  use {
+    'VonHeikemen/fine-cmdline.nvim',
+    requires = 'MunifTanjim/nui.nvim'
+  }
+
+  -- 状态栏
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+
+  -- 标签栏
+  use {
+    'akinsho/bufferline.nvim',
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
+
+  -- ============== LSP相关 ==================
+  -- 自动补全
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp', -- nvim内置lsp客户端的nvim-cmp源码
+      'onsails/lspkind-nvim', -- 自动完成美化
+      'hrsh7th/cmp-nvim-lua',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-cmdline',
+      "hrsh7th/cmp-emoji"
+    }
+  }
+
+  -- lsp安装器
+  use {
+    'williamboman/nvim-lsp-installer',
+    requires = 'neovim/nvim-lspconfig'
+  }
+
+  -- 自动补全美化
+  use 'folke/lsp-colors.nvim'
+
+  -- java自动补全
+  use 'mfussenegger/nvim-jdtls'
+
+  -- 内置LSP UI优化
+  use {
+    'glepnir/lspsaga.nvim',
+    requires = 'neovim/nvim-lspconfig'
+  }
+
+
+  -- ============= 代码相关 ===============
   -- 语法高亮
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -25,20 +93,64 @@ return require('packer').startup(function()
     'romgrk/nvim-treesitter-context',
     requires = 'nvim-treesitter/nvim-treesitter'
   }
-    -- 多光标操作
+
+  -- 多光标操作
   use {
-    'mg979/vim-visual-multi', 
+    'mg979/vim-visual-multi',
     branch = 'master'
   }
+
+   -- 缩进
+  use "lukas-reineke/indent-blankline.nvim"
+
+  -- 语法导航
+  use {
+    "SmiteshP/nvim-gps",
+    requires = "nvim-treesitter/nvim-treesitter"
+  }
+
+  -- 高亮颜色代码
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- 代码片段
+  use {
+    'L3MON4D3/LuaSnip',
+    requires = {
+      'saadparwaiz1/cmp_luasnip',
+      "rafamadriz/friendly-snippets",
+    }
+  }
+
+  -- 显示函数签名
+  use "ray-x/lsp_signature.nvim"
+
+  -- 括号自动补全
+  use 'windwp/nvim-autopairs'
+
+  -- 代码运行
+  use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+
+  -- 代码格式化
+  use 'mhartington/formatter.nvim'
+
+  -- 高亮光标所在的所有相同单词
+  use {
+    'RRethy/vim-illuminate'
+  }
+
+  -- markdown预览
+  use {"ellisonleao/glow.nvim"}
+
+  -- 拼写检查
+  use {
+    'lewis6991/spellsitter.nvim',
+  }
+
+  -- ============= 功能相关 =================
   -- 搜索神器
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  --启动页
-  use {
-    'glepnir/dashboard-nvim'
   }
 
   -- 文件树
@@ -59,109 +171,7 @@ return require('packer').startup(function()
   -- lazygit
   use 'kdheepak/lazygit.nvim'
 
-  -- 缩进
-  use "lukas-reineke/indent-blankline.nvim"
-
-  -- 漂亮的命令提示
-  use {
-    'gelguy/wilder.nvim',
-    run = ':UpdateRemotePlugins'
-  }
-
-  -- 语法导航
-  use {
-    "SmiteshP/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter"
-  }
-
-  -- 高亮颜色代码
-  use 'norcalli/nvim-colorizer.lua'
-
-  -- 浮动终端
-  use "numToStr/FTerm.nvim"
-
-  -- 自动补全
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-      'hrsh7th/cmp-nvim-lsp', -- nvim内置lsp客户端的nvim-cmp源码
-      'onsails/lspkind-nvim', -- 自动完成美化
-      'hrsh7th/cmp-nvim-lua',
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
-      'hrsh7th/cmp-cmdline',
-      "hrsh7th/cmp-emoji"
-    }
-  }
-
-   -- lsp安装器
-  use {
-    'williamboman/nvim-lsp-installer',
-    requires = 'neovim/nvim-lspconfig'
-  }
- 
-  -- 自动补全美化
-  use 'folke/lsp-colors.nvim'
-
-  -- java自动补全
-  use 'mfussenegger/nvim-jdtls'
-
-  -- 内置LSP UI优化
-  use {
-    'glepnir/lspsaga.nvim',
-    requires = 'neovim/nvim-lspconfig'
-  }
-
-  -- 浮动cmdline
-  use {
-    'VonHeikemen/fine-cmdline.nvim',
-    requires = 'MunifTanjim/nui.nvim'
-  }
-
-  -- 代码片段
-  use {
-    'L3MON4D3/LuaSnip',
-    requires = {
-      'saadparwaiz1/cmp_luasnip',
-      "rafamadriz/friendly-snippets",
-    }
-  }
-
-  -- 显示函数签名
-  use "ray-x/lsp_signature.nvim"
-
-  -- 状态栏
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
-
-  -- 括号自动补全
-  use 'windwp/nvim-autopairs'
-
-  -- 代码运行
-  use { 'michaelb/sniprun', run = 'bash ./install.sh'}
-
-  -- 代码格式化
-  use 'mhartington/formatter.nvim'
-
-  -- 标签栏
-  use {
-    'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
-
-  -- markdown预览
-  use {"ellisonleao/glow.nvim"}
-
-  -- 拼写检查
-  use {
-    'lewis6991/spellsitter.nvim',
-  }
-
-  -- 高亮光标所在的所有相同单词
-  use {
-    'RRethy/vim-illuminate'
-  }
+  -- 快捷键映射
+  use 'folke/which-key.nvim'
 
 end)
