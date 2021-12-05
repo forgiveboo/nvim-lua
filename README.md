@@ -49,7 +49,7 @@ ln -s ~/.nvim-lua nvim
 - [ ] [spellsitter](https://github.com/lewis6991/spellsitter.nvim)
 - [ ] [which-key](https://github.com/folke/which-key.nvim)
 - [ ] [wilder](https://github.com/gelguy/wilder.nvim)
-- [ ] [lazygit](https://github.com/kdheepak/lazygit.nvim)
+- [X] [lazygit](https://github.com/kdheepak/lazygit.nvim)
 > 只贴出了需要配置的插件，其他可以直接使用的没有贴出来
 #### TODO
 ##### 2021.12.2
