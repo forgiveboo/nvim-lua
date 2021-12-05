@@ -46,10 +46,11 @@ ln -s ~/.nvim-lua nvim
 - [X] [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [ ] [nvim-treesitter-context](https://github.com/romgrk/nvim-treesitter-context)
 - [ ] [sniprun](https://github.com/michaelb/sniprun)
-- [ ] [spellsitter](https://github.com/lewis6991/spellsitter.nvim)
+- [X] [spellsitter](https://github.com/lewis6991/spellsitter.nvim)
 - [ ] [which-key](https://github.com/folke/which-key.nvim)
 - [ ] [wilder](https://github.com/gelguy/wilder.nvim)
 - [X] [lazygit](https://github.com/kdheepak/lazygit.nvim)
+- [ ] [Comment](https://github.com/numToStr/Comment.nvim)
 > 只贴出了需要配置的插件，其他可以直接使用的没有贴出来
 #### TODO
 ##### 2021.12.2

@@ -86,6 +86,14 @@ return require('packer').startup(function()
     requires = 'neovim/nvim-lspconfig'
   }
 
+  -- 代码片段
+  use {
+    'L3MON4D3/LuaSnip',
+    requires = {
+      'saadparwaiz1/cmp_luasnip',
+      "rafamadriz/friendly-snippets",
+    }
+  }
 
   -- ============= 代码相关 ===============
   -- 语法高亮
@@ -94,7 +102,7 @@ return require('packer').startup(function()
     run = ':TSUpdate'
   }
 
-  -- 文本注释
+  -- 显示当前在哪个函数中
   use {
     'romgrk/nvim-treesitter-context',
     requires = 'nvim-treesitter/nvim-treesitter'
@@ -117,15 +125,6 @@ return require('packer').startup(function()
 
   -- 高亮颜色代码
   use 'norcalli/nvim-colorizer.lua'
-
-  -- 代码片段
-  use {
-    'L3MON4D3/LuaSnip',
-    requires = {
-      'saadparwaiz1/cmp_luasnip',
-      "rafamadriz/friendly-snippets",
-    }
-  }
 
   -- 显示函数签名
   use "ray-x/lsp_signature.nvim"
@@ -151,6 +150,9 @@ return require('packer').startup(function()
   use {
     'lewis6991/spellsitter.nvim',
   }
+
+  -- 快速注释
+  use 'numToStr/Comment.nvim'
 
   -- ============= 功能相关 =================
   -- 搜索神器
