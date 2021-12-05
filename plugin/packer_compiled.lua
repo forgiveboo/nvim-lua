@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["FTerm.nvim"] = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
@@ -273,6 +278,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["searchbox.nvim"] = {
+    loaded = true,
+    path = "/home/forgiveboo/.local/share/nvim/site/pack/packer/start/searchbox.nvim",
+    url = "https://github.com/VonHeikemen/searchbox.nvim"
   },
   sniprun = {
     loaded = true,

@@ -100,4 +100,5 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' }
   })
 })
+
 require('plugins.lsp-signature')
