@@ -1,6 +1,6 @@
 require('bufferline').setup {
   options = {
-    numbers = "buffer_id",
+    numbers = "none",
     --- @deprecated, please specify numbers as a function to customize the styling
     close_command = "bdelete! %d",       -- can be a string | function, see "Mouse actions"
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -58,7 +58,7 @@ require('bufferline').setup {
       -- can also be a table containing 2 custom separators
       -- [focused and unfocused]. eg: { '|', '|' }
       separator_style = "slant",
-      enforce_regular_tabs = false,
+      enforce_regular_tabs = true,
       always_show_bufferline = true,
       sort_by = 'id'
     },
