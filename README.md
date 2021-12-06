@@ -44,7 +44,7 @@ ln -s ~/.nvim-lua nvim
 - [ ] [nvim-gps](https://github.com/SmiteshP/nvim-gps)
 - [ ] [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)
 - [X] [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [ ] [nvim-treesitter-context](https://github.com/romgrk/nvim-treesitter-context)
+- [X] [nvim-treesitter-context](https://github.com/romgrk/nvim-treesitter-context)
 - [ ] [sniprun](https://github.com/michaelb/sniprun)
 - [X] [spellsitter](https://github.com/lewis6991/spellsitter.nvim)
 - [ ] [which-key](https://github.com/folke/which-key.nvim)
