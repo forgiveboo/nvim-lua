@@ -24,6 +24,18 @@ formatter.setup(
             stdin = true
           }
         end
+      },
+
+      python = {
+      function()
+        return {
+          exe = "python3 -m autopep8",
+          args = {
+            "--in-place --aggressive --aggressive",
+            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))
+          }
+        }
+        end
       }
     }
   }
@@ -34,7 +46,7 @@ vim.api.nvim_exec(
   [[
     augroup FormatAutogroup
     autocmd!
-    autocmd BufWritePost *.rs,*.lua FormatWrite
+    autocmd BufWritePost *.rs,*.lua,*.java FormatWrite
     augroup END
 ]],
   true

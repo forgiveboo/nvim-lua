@@ -26,11 +26,11 @@ ln -s ~/.nvim-lua nvim
 - 安装插件`:PackerInstall`
 > 中国用户可能需要"特殊处理"
 #### 用到的插件
-- [ ] [bufferline](https://github.com/akinsho/bufferline.nvim)
-- [ ] [dashboard](https://github.com/glepnir/dashboard-nvim)
-- [ ] [formatter](https://github.com/mhartington/formatter.nvim)
+- [X] [bufferline](https://github.com/akinsho/bufferline.nvim)
+- [X] [dashboard](https://github.com/glepnir/dashboard-nvim)
+- [X] [formatter](https://github.com/mhartington/formatter.nvim)
 - [X] [Fterm](https://github.com/numToStr/FTerm.nvim)
-- [ ] [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [X] [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [X] [glow](https://github.com/ellisonleao/glow.nvim)
 - [X] [inent-blank-line](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [X] [lsp-color](https://github.com/folke/lsp-colors.nvim)
