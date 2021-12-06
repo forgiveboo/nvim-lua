@@ -26,11 +26,11 @@ map("n", "s=", "<C-w>=", opt)
 map("n", "sj", ":resize +10<CR>",opt)
 map("n", "sk", ":resize -10<CR>",opt)
 
--- alt + hjkl  窗口之间跳转
---map("n", "<A-h>", "<C-w>h", opt)
---map("n", "<A-j>", "<C-w>j", opt)
---map("n", "<A-k>", "<C-w>k", opt)
---map("n", "<A-l>", "<C-w>l", opt)
+-- ctlr + hjkl  窗口之间跳转
+map("n", "<c-h>", "<C-w>h", opt)
+map("n", "<c-j>", "<C-w>j", opt)
+map("n", "<c-k>", "<C-w>k", opt)
+map("n", "<c-l>", "<C-w>l", opt)
 
 -- 保存和退出
 map('n', '<C-x>', ':q<CR>', opt)
