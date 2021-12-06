@@ -41,6 +41,8 @@ return require('packer').startup(function()
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
+  use 'famiu/feline.nvim'
+
   -- 标签栏
   use {
     'akinsho/bufferline.nvim',
