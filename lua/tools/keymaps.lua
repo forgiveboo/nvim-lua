@@ -27,55 +27,55 @@ map("n", "sj", ":resize +10<CR>",opt)
 map("n", "sk", ":resize -10<CR>",opt)
 
 -- alt + hjkl  窗口之间跳转
-map("n", "<A-h>", "<C-w>h", opt)
-map("n", "<A-j>", "<C-w>j", opt)
-map("n", "<A-k>", "<C-w>k", opt)
-map("n", "<A-l>", "<C-w>l", opt)
+--map("n", "<A-h>", "<C-w>h", opt)
+--map("n", "<A-j>", "<C-w>j", opt)
+--map("n", "<A-k>", "<C-w>k", opt)
+--map("n", "<A-l>", "<C-w>l", opt)
 
 -- 保存和退出
 map('n', '<C-x>', ':q<CR>', opt)
 map('n', '<C-s>', ':w<CR>', opt)
 
 -- 开关文件树
-map('n', '<leader>nt', ":NvimTreeToggle<CR>", opt)
+map('n', '<A-n>', ":NvimTreeToggle<CR>", opt)
 -- 开关浮动终端
-map('n', '<leader>tm', '<cmd>lua require("FTerm").toggle()<CR>', opt)
-map('t', '<leader>tm', '<cmd>lua require("FTerm").toggle()<CR>', opt)
+map('n', '<A-t>', '<cmd>lua require("FTerm").toggle()<CR>', opt)
+map('t', '<A-t>', '<cmd>lua require("FTerm").toggle()<CR>', opt)
 -- 打开浮动命令栏
-map('n', '<leader>cl', '<cmd>lua require("fine-cmdline").open()<CR>', opt)
+map('n', '<A-c>', '<cmd>lua require("fine-cmdline").open()<CR>', opt)
 -- markdown预览
-map('n', '<leader>mp', ':Glow<CR>', opt)
+map('n', '<A-m>', ':Glow<CR>', opt)
 -- 快速运行代码
 map('n', '<F5>',  ':SnipRun<CR>', opt)
 -- 后一个buffer
-map('n', '<leader>bh', ':BufferLineCycleNext<CR>',opt)
+map('n', '<A-j>', ':BufferLineCycleNext<CR>',opt)
 -- 前一个buffer
-map('n', '<leader>bl', ':BufferLineCyclePrev<CR>', opt)
+map('n', '<A-k>', ':BufferLineCyclePrev<CR>', opt)
 -- 选择一个buffer
-map('n', '<leader>bp', ':BufferLinePick<CR>', opt)
+map('n', '<A-b>', ':BufferLinePick<CR>', opt)
 -- 选择一个buffer并关闭
 map('n', '<leader>bc', ':BufferLinePickClose<CR>', opt)
 -- 文件搜索
-map('n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>', opt)
+map('n', '<A-f>', '<cmd>lua require("telescope.builtin").find_files()<cr>', opt)
 map('n', '<leader>fl', '<cmd>lua require("telescope.builtin").live_grep()<cr>', opt)
 map('n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>', opt)
 map('n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opt)
 -- 一系列lspsaga快捷键
 map('n', '<leader>lf', '<cmd>lua require("lspsaga.provider").lsp_finder()<CR>', opt)
-map('n', '<leader>ca', '<cmd>lua require("lspsaga.codeaction").code_action()<CR>', opt)
-map('v', '<leader>ca', ':<C-U>lua require("lspsaga.codeaction").range_code_action()<CR>', opt)
-map('n', '<leader>rd', '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>', opt)
-map('n', '<leader>sw', '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>', opt)
-map('n', '<leader>su', '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>', opt)
-map('n', '<leader>sh', '<cmd>lua require("lspsaga.signaturehelp").signature_help()<CR>', opt)
-map('n', '<leader>rm', '<cmd>lua require("lspsaga.rename").rename()<CR>', opt)
-map('n', '<leader>pd', '<cmd>lua require("lspsaga.provider").preview_definition()<CR>', opt)
+--map('n', '<leader>ca', '<cmd>lua require("lspsaga.codeaction").code_action()<CR>', opt)
+--map('v', '<leader>ca', ':<C-U>lua require("lspsaga.codeaction").range_code_action()<CR>', opt)
+--map('n', '<leader>rd', '<cmd>lua require("lspsaga.hover").render_hover_doc()<CR>', opt)
+map('n', '<A-dowm>', '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>', opt)
+map('n', '<A-up>', '<cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>', opt)
+--map('n', '<leader>sh', '<cmd>lua require("lspsaga.signaturehelp").signature_help()<CR>', opt)
+map('n', '<A-r>', '<cmd>lua require("lspsaga.rename").rename()<CR>', opt)
+map('n', '<A-p>', '<cmd>lua require("lspsaga.provider").preview_definition()<CR>', opt)
 map('n', '<leader>ld', '<cmd>lua require("lspsaga.diagnostic").show_line_diagnostics()<CR>', opt)
 map('n', '<leader>cd', '<cmd>lua require("lspsaga.diagnostic").show_cursor_diagnostics()<CR>', opt)
 map('n', '<leader>jp', ' <cmd>lua require("lspsaga.diagnostic").lsp_jump_diagnostic_prev()<CR>', opt)
 map('n', '<leader>jn', '<cmd>lua require("lspsaga.diagnostic").lsp_jump_diagnostic_next()<CR>', opt)
 -- lazygit
-map('n', '<leader>lg', ':LazyGit<CR>', opt)
+map('n', '<A-g>', ':LazyGit<CR>', opt)
 -- searchbox
-map('n', '<leader>s',  '<cmd>lua require("searchbox").incsearch()<CR>', opt)
-map('v', '<leader>s',  '<Esc><cmd>lua require("searchbox").incsearch({visual_mode = true})<CR>', opt)
+map('n', '<A-s>',  '<cmd>lua require("searchbox").incsearch()<CR>', opt)
+map('v', '<A-s>',  '<Esc><cmd>lua require("searchbox").incsearch({visual_mode = true})<CR>', opt)
