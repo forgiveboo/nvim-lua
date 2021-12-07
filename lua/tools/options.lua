@@ -79,7 +79,7 @@ vim.o.pumheight = 10
 vim.g.tokyonight_style = "night"
 vim.g.tokyonight_italic_functions = true
 vim.g.tokyonight_italic_comments = false
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme gruvbox]]
 --vim.cmd [[
 --  hi Normal guibg=NONE ctermbg=NONE
 --  hi LineNr guibg=NONE ctermbg=NONE

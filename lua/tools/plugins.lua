@@ -11,6 +11,10 @@ return require('packer').startup(function()
   use 'bluz71/vim-moonfly-colors'
   use 'ray-x/aurora'
   use 'folke/tokyonight.nvim'
+  use {
+    "ellisonleao/gruvbox.nvim",
+    requires = "rktjmp/lush.nvim"
+  }
 
   -- 内浮窗UI美化
   use 'stevearc/dressing.nvim'
