@@ -79,3 +79,4 @@ map('n', '<A-g>', ':LazyGit<CR>', opt)
 -- searchbox
 map('n', '<A-s>',  '<cmd>lua require("searchbox").incsearch()<CR>', opt)
 map('v', '<A-s>',  '<Esc><cmd>lua require("searchbox").incsearch({visual_mode = true})<CR>', opt)
+-- whichkey
