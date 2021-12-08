@@ -14,7 +14,8 @@ local components = {
 }
 
 local colors = {
-  bg = '#282828',
+--  bg = '#282828',
+  bg = '#1f2335',
   black = '#282828',
   yellow = '#d8a657',
   cyan = '#89b482',
