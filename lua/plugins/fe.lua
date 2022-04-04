@@ -1,4 +1,0 @@
-local components = {
-  active = {},
-  inactive = {}
-}
